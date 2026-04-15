@@ -1,0 +1,29 @@
+[
+  {
+    "id": "reyesoft-web-corporativo",
+    "title": "Sitio Web Corporativo",
+    "url": "https://www.figma.com/design/REPLACE_WITH_REAL_KEY/Sitio-Web-Corporativo",
+    "fileKey": "REPLACE_WITH_REAL_KEY",
+    "description": "Rediseño del sitio corporativo de Reyesoft. Incluye todas las secciones del sitio.",
+    "product": "Reyesoft",
+    "keywords": ["hero", "navbar", "footer", "productos", "careers", "blog", "contacto", "manifesto", "stats"]
+  },
+  {
+    "id": "saldoar-app",
+    "title": "Saldoar — App Mobile",
+    "url": "https://www.figma.com/design/REPLACE_WITH_REAL_KEY/Saldoar-App",
+    "fileKey": "REPLACE_WITH_REAL_KEY",
+    "description": "Diseño de la app mobile de Saldoar. Intercambio P2P de dinero digital.",
+    "product": "Saldoar",
+    "keywords": ["onboarding", "wallet", "transferencia", "historial", "perfil", "kyc", "home"]
+  },
+  {
+    "id": "fisconexo-dashboard",
+    "title": "Fisconexo — Dashboard",
+    "url": "https://www.figma.com/design/REPLACE_WITH_REAL_KEY/Fisconexo-Dashboard",
+    "fileKey": "REPLACE_WITH_REAL_KEY",
+    "description": "Panel de asesoría contable para trabajadores independientes.",
+    "product": "Fisconexo",
+    "keywords": ["dashboard", "declaraciones", "facturas", "asesor", "impuestos", "monotributo"]
+  }
+]
