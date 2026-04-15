@@ -19,14 +19,10 @@ export default async function Home() {
       {/* Header */}
       <header className="border-b border-neutral-800 px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center gap-3">
-          <div className="w-7 h-7 rounded-lg bg-neutral-800 flex items-center justify-center shrink-0">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <rect x="1" y="1" width="5" height="5" rx="1" fill="currentColor" className="text-neutral-400"/>
-              <rect x="8" y="1" width="5" height="5" rx="1" fill="currentColor" className="text-neutral-400"/>
-              <rect x="1" y="8" width="5" height="5" rx="1" fill="currentColor" className="text-neutral-400"/>
-              <rect x="8" y="8" width="5" height="5" rx="1" fill="currentColor" className="text-neutral-400"/>
-            </svg>
-          </div>
+          {/* Logo — reemplazá public/logo.svg con el logo real */}
+          {/* También acepta PNG: cambiá la extensión acá y en public/ */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="Reyesoft" width={28} height={28} className="shrink-0" />
           <span className="font-semibold text-neutral-100 text-sm tracking-tight">
             Reyesoft Figma Hub
           </span>
