@@ -5,7 +5,6 @@ import Fuse from 'fuse.js'
 import { FigmaFileWithThumbnail } from '@/types'
 import FileCard from './FileCard'
 import SearchBar from './SearchBar'
-import ProductFilter from './ProductFilter'
 
 interface Props {
   files: FigmaFileWithThumbnail[]
@@ -13,23 +12,11 @@ interface Props {
 
 export default function FileGrid({ files }: Props) {
   const [query, setQuery] = useState('')
-  const [selectedProduct, setSelectedProduct] = useState<string | null>(null)
-
-  const availableProducts = useMemo(
-    () => [...new Set(files.map((f) => f.product))].sort(),
-    [files]
-  )
 
   const filtered = useMemo(() => {
-    let result = files
+    if (!query.trim()) return files
 
-    if (selectedProduct) {
-      result = result.filter((f) => f.product === selectedProduct)
-    }
-
-    if (!query.trim()) return result
-
-    const fuse = new Fuse(result, {
+    const fuse = new Fuse(files, {
       keys: [
         { name: 'title', weight: 2 },
         { name: 'keywords', weight: 2 },
@@ -40,7 +27,7 @@ export default function FileGrid({ files }: Props) {
     })
 
     return fuse.search(query).map((r) => r.item)
-  }, [files, query, selectedProduct])
+  }, [files, query])
 
   if (files.length === 0) {
     return (
@@ -62,12 +49,7 @@ export default function FileGrid({ files }: Props) {
         resultCount={filtered.length}
         totalCount={files.length}
       />
-      <ProductFilter
-        selected={selectedProduct}
-        onChange={setSelectedProduct}
-        availableProducts={availableProducts}
-      />
-      {filtered.length === 0 ? (
+{filtered.length === 0 ? (
         <div className="text-center py-16">
           <p className="text-neutral-400 text-base">No se encontraron archivos</p>
           <p className="text-neutral-600 text-sm mt-1">Probá con otros términos</p>

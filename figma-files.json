@@ -1,29 +1,137 @@
 [
   {
-    "id": "reyesoft-web-corporativo",
-    "title": "Sitio Web Corporativo",
-    "url": "https://www.figma.com/design/REPLACE_WITH_REAL_KEY/Sitio-Web-Corporativo",
-    "fileKey": "REPLACE_WITH_REAL_KEY",
-    "description": "Rediseño del sitio corporativo de Reyesoft. Incluye todas las secciones del sitio.",
-    "product": "Reyesoft",
-    "keywords": ["hero", "navbar", "footer", "productos", "careers", "blog", "contacto", "manifesto", "stats"]
-  },
-  {
-    "id": "saldoar-app",
-    "title": "Saldoar — App Mobile",
-    "url": "https://www.figma.com/design/REPLACE_WITH_REAL_KEY/Saldoar-App",
-    "fileKey": "REPLACE_WITH_REAL_KEY",
-    "description": "Diseño de la app mobile de Saldoar. Intercambio P2P de dinero digital.",
+    "id": "saldoar-e2e-productivo",
+    "title": "E2E productivo",
+    "url": "https://www.figma.com/design/XMFD2PsbxufbkjpIwuTPRQ/0---E2E-productivo?m=auto&t=28zTACzQjq76dFEL-6",
+    "fileKey": "XMFD2PsbxufbkjpIwuTPRQ",
+    "description": "Flujo principal end-to-end de la app de Saldoar. Reúne la visión general del recorrido productivo del usuario dentro del producto.",
     "product": "Saldoar",
-    "keywords": ["onboarding", "wallet", "transferencia", "historial", "perfil", "kyc", "home"]
+    "keywords": ["e2e", "flujo principal", "app", "journey", "end to end", "flujo productivo", "recorrido usuario"]
   },
   {
-    "id": "fisconexo-dashboard",
-    "title": "Fisconexo — Dashboard",
-    "url": "https://www.figma.com/design/REPLACE_WITH_REAL_KEY/Fisconexo-Dashboard",
-    "fileKey": "REPLACE_WITH_REAL_KEY",
-    "description": "Panel de asesoría contable para trabajadores independientes.",
-    "product": "Fisconexo",
-    "keywords": ["dashboard", "declaraciones", "facturas", "asesor", "impuestos", "monotributo"]
+    "id": "saldoar-home",
+    "title": "Home",
+    "url": "https://www.figma.com/design/ZhsnUWrt7szL4ZkmLTsjp1/1.-Home?m=auto&t=28zTACzQjq76dFEL-6",
+    "fileKey": "ZhsnUWrt7szL4ZkmLTsjp1",
+    "description": "Archivo principal del home de Saldoar. Incluye diseños de webapp, app y web pública, además de calculadora pro, login en app, filtros de búsqueda y footer.",
+    "product": "Saldoar",
+    "keywords": ["home", "landing", "webapp", "app", "web", "footer", "calculadora", "calculadora pro", "filtros", "busqueda", "login app"]
+  },
+  {
+    "id": "saldoar-onboarding",
+    "title": "Onboarding",
+    "url": "https://www.figma.com/design/bmlcqZJ3kuxWP0gjUdDoS8/2.-Intro---Onboarding?m=auto&t=28zTACzQjq76dFEL-6",
+    "fileKey": "bmlcqZJ3kuxWP0gjUdDoS8",
+    "description": "Onboarding de Saldoar para app y login web. También contiene una página dedicada a la iniciativa de Passkey para web y app.",
+    "product": "Saldoar",
+    "keywords": ["onboarding", "intro", "walkthrough", "app", "web", "login", "passkey", "acceso", "autenticacion"]
+  },
+  {
+    "id": "saldoar-nuevo-pedido",
+    "title": "Nuevo pedido",
+    "url": "https://www.figma.com/design/IT5X6dCQDtePiLLawSLMa0/3.-Nuevo-pedido?m=auto&t=28zTACzQjq76dFEL-6",
+    "fileKey": "IT5X6dCQDtePiLLawSLMa0",
+    "description": "Diseño del paso B del home y de la sección de dashboard para nuevo pedido. Incluye calculadora, alertas de precio y sus versiones web y mobile.",
+    "product": "Saldoar",
+    "keywords": ["nuevo pedido", "dashboard", "paso b", "calculadora", "alerta de precio", "price alerts", "mobile", "web", "orden"]
+  },
+  {
+    "id": "saldoar-login-registro",
+    "title": "Login y registro",
+    "url": "https://www.figma.com/design/30ddcgBVLCcAt7IM55NasV/4.-Login---Registro?m=auto&t=G27xdN7cCDJSwxqO-6",
+    "fileKey": "30ddcgBVLCcAt7IM55NasV",
+    "description": "Flujo completo de login y registro de Saldoar para web y app.",
+    "product": "Saldoar",
+    "keywords": ["login", "registro", "auth", "autenticacion", "web", "app", "acceso", "sign in", "sign up"]
+  },
+  {
+    "id": "saldoar-lista-de-pedidos",
+    "title": "Lista de pedidos",
+    "url": "https://www.figma.com/design/OafeknjvTOVQRFQbA8PoUI/6.-Pedidos?m=auto&t=G27xdN7cCDJSwxqO-6",
+    "fileKey": "OafeknjvTOVQRFQbA8PoUI",
+    "description": "Listado de pedidos del dashboard de Saldoar. Muestra historial de pedidos, estados y seguimiento general de cada orden.",
+    "product": "Saldoar",
+    "keywords": ["pedidos", "lista de pedidos", "dashboard", "historial", "estado del pedido", "ordenes", "tracking"]
+  },
+  {
+    "id": "saldoar-balances",
+    "title": "Balances",
+    "url": "https://www.figma.com/design/bfKEI747lROcYWKdyu05QE/7.-Balances?m=auto&t=G27xdN7cCDJSwxqO-6",
+    "fileKey": "bfKEI747lROcYWKdyu05QE",
+    "description": "Sección de balances del dashboard de Saldoar. Incluye ingreso, retiro, envío, conversión y recepción de dinero, historial de movimientos, comprobantes, walkthrough y aplicación de balances en ofertas.",
+    "product": "Saldoar",
+    "keywords": ["balances", "balance", "dashboard", "ingresar dinero", "retirar dinero", "enviar dinero", "convertir", "recibir dinero", "historial de movimientos", "comprobante", "walkthrough", "ofertas"]
+  },
+  {
+    "id": "saldoar-instrucciones",
+    "title": "Instrucciones",
+    "url": "https://www.figma.com/design/zeP5ZcDQ0VSsTvhmSZboNF/8.-Instrucciones?m=auto&t=G27xdN7cCDJSwxqO-6",
+    "fileKey": "zeP5ZcDQ0VSsTvhmSZboNF",
+    "description": "Archivo de instrucciones de Saldoar. Incluye envíos y recibos, helpers, chat, onboarding, subida de comprobantes, reconexión, validaciones, casos específicos por plataforma, execution states y la iniciativa de 'Necesito ayuda'.",
+    "product": "Saldoar",
+    "keywords": ["instrucciones", "envios", "recibos", "helper", "chat", "onboarding", "subida de comprobantes", "reconexion", "validacion", "payoneer", "paypal", "mercadopago", "cripto", "veriff", "execution states", "necesito ayuda"]
+  },
+  {
+    "id": "saldoar-chat",
+    "title": "Chat",
+    "url": "https://www.figma.com/design/gzHbyzxX4DBVexP870EnzK/9.-Chat?m=auto&t=G27xdN7cCDJSwxqO-6",
+    "fileKey": "gzHbyzxX4DBVexP870EnzK",
+    "description": "Archivo dedicado exclusivamente a la sección de chat dentro de las instrucciones de Saldoar.",
+    "product": "Saldoar",
+    "keywords": ["chat", "instrucciones", "mensajeria", "soporte", "conversacion", "ayuda"]
+  },
+  {
+    "id": "saldoar-ofertas",
+    "title": "Ofertas",
+    "url": "https://www.figma.com/design/lJwaw8vEsc92tyUHR4JW7b/10.-Ofertas?m=auto&t=28zTACzQjq76dFEL-6",
+    "fileKey": "lJwaw8vEsc92tyUHR4JW7b",
+    "description": "Archivo de ofertas de Saldoar. Contiene la landing pública, la sección de dashboard, alertas de ofertas y la bolsa de ofertas.",
+    "product": "Saldoar",
+    "keywords": ["ofertas", "landing publica", "dashboard", "alerta de ofertas", "bolsa de ofertas", "promociones", "capturar oferta"]
+  },
+  {
+    "id": "saldoar-perfil",
+    "title": "Perfil",
+    "url": "https://www.figma.com/design/A5tqdYxHROJqrJxVp9SN63/11.-Perfil?m=auto&t=28zTACzQjq76dFEL-6",
+    "fileKey": "A5tqdYxHROJqrJxVp9SN63",
+    "description": "Sección de perfil dentro del dashboard de Saldoar. Incluye datos personales, nivel de usuario y configuraciones de seguridad como cambio de contraseña, idioma y desactivación de cuenta.",
+    "product": "Saldoar",
+    "keywords": ["perfil", "dashboard", "nombre", "apellido", "email", "seguridad", "cambiar contraseña", "idioma", "desactivar cuenta", "nivel"]
+  },
+  {
+    "id": "saldoar-cuentas",
+    "title": "Cuentas",
+    "url": "https://www.figma.com/design/k6iGbpdJ6NgFB3qJ8pnDpv/12.-Cuentas?m=auto&t=28zTACzQjq76dFEL-6",
+    "fileKey": "k6iGbpdJ6NgFB3qJ8pnDpv",
+    "description": "Sección de cuentas del dashboard de Saldoar. Permite crear nuevas cuentas, archivarlas y aplicar filtros para gestionarlas dentro de la plataforma.",
+    "product": "Saldoar",
+    "keywords": ["cuentas", "dashboard", "crear cuenta", "archivar", "filtros", "gestion de cuentas", "metodos"]
+  },
+  {
+    "id": "saldoar-notificaciones",
+    "title": "Notificaciones",
+    "url": "https://www.figma.com/design/lmsrD9GKxgcfDGk5WhxKhq/13.-Notificaciones?m=auto&t=28zTACzQjq76dFEL-6",
+    "fileKey": "lmsrD9GKxgcfDGk5WhxKhq",
+    "description": "Diseño del sistema de notificaciones de Saldoar para web y app. Incluye componente de notificaciones y flujo para activarlas vinculado a documentación de Google.",
+    "product": "Saldoar",
+    "keywords": ["notificaciones", "web", "app", "componente", "activar notificaciones", "google", "push notifications", "alerts"]
+  },
+  {
+    "id": "saldoar-referidos",
+    "title": "Referidos",
+    "url": "https://www.figma.com/design/lgNA0V0AW66iegBGBRmQtc/14.-Referidos?m=auto&t=28zTACzQjq76dFEL-6",
+    "fileKey": "lgNA0V0AW66iegBGBRmQtc",
+    "description": "Archivo de referidos de Saldoar. Incluye la landing pública y la sección de dashboard para compartir referidos y retirar ganancias.",
+    "product": "Saldoar",
+    "keywords": ["referidos", "landing publica", "dashboard", "compartir referido", "retirar ganancias", "invitaciones", "rewards"]
+  },
+  {
+    "id": "saldoar-recibidos",
+    "title": "Recibidos",
+    "url": "https://www.figma.com/design/9w3mWiTEbjeWPz5DvIFusW/15.-Recibidos?m=auto&t=G27xdN7cCDJSwxqO-6",
+    "fileKey": "9w3mWiTEbjeWPz5DvIFusW",
+    "description": "Vista de recibidos dentro del dashboard de Saldoar. Permite visualizar pagos recibidos por pedido y ejecutar acciones como confirmar o reportar que un pago no fue recibido.",
+    "product": "Saldoar",
+    "keywords": ["recibidos", "dashboard", "pagos recibidos", "ya lo recibi", "no lo recibi", "confirmacion", "pedido"]
   }
 ]
