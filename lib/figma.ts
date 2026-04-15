@@ -6,10 +6,10 @@ export async function fetchFileThumbnail(fileKey: string): Promise<string | null
   }
 
   const controller = new AbortController()
-  const timeoutId = setTimeout(() => controller.abort(), 5000)
+  const timeoutId = setTimeout(() => controller.abort(), 15000)
 
   try {
-    const res = await fetch(`https://api.figma.com/v1/files/${fileKey}`, {
+    const res = await fetch(`https://api.figma.com/v1/files/${fileKey}?depth=1`, {
       headers: { 'X-Figma-Token': token },
       cache: 'force-cache',
       signal: controller.signal,
