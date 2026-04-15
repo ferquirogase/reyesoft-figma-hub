@@ -8,10 +8,10 @@ export const dynamic = 'force-static'
 
 export default async function Home() {
   const files: FigmaFileWithThumbnail[] = await Promise.all(
-    (filesConfig as FigmaFileConfig[]).map(async (file) => ({
-      ...file,
-      thumbnailUrl: await fetchFileThumbnail(file.fileKey),
-    }))
+    (filesConfig as FigmaFileConfig[]).map(async (file) => {
+      const { thumbnailUrl, lastModified } = await fetchFileThumbnail(file.fileKey)
+      return { ...file, thumbnailUrl, lastModified }
+    })
   )
 
   return (

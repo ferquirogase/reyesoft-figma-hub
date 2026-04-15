@@ -12,4 +12,5 @@ export interface FigmaFileConfig {
 
 export interface FigmaFileWithThumbnail extends FigmaFileConfig {
   thumbnailUrl: string | null
+  lastModified: string | null
 }

@@ -4,6 +4,19 @@ interface Props {
   file: FigmaFileWithThumbnail
 }
 
+function formatLastModified(dateString: string | null): string | null {
+  if (!dateString) return null
+  const date = new Date(dateString)
+  const now = new Date()
+  const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
+  if (diffDays === 0) return 'hoy'
+  if (diffDays === 1) return 'ayer'
+  if (diffDays < 7) return `hace ${diffDays} días`
+  if (diffDays < 30) return `hace ${Math.floor(diffDays / 7)} sem.`
+  if (diffDays < 365) return `hace ${Math.floor(diffDays / 30)} meses`
+  return 'hace más de un año'
+}
+
 const PRODUCT_BADGE: Record<string, string> = {
   Saldoar: 'bg-emerald-500/10 text-emerald-400 ring-emerald-500/20',
   Reyesoft: 'bg-neutral-500/10 text-neutral-400 ring-neutral-500/20',
@@ -15,6 +28,7 @@ const PRODUCT_BADGE: Record<string, string> = {
 export default function FileCard({ file }: Props) {
   const badgeClass =
     PRODUCT_BADGE[file.product] ?? 'bg-neutral-500/10 text-neutral-400 ring-neutral-500/20'
+  const updatedAt = formatLastModified(file.lastModified)
 
   return (
     <div className="group flex flex-col rounded-xl border border-neutral-800 bg-neutral-900 overflow-hidden hover:border-neutral-700 transition-colors duration-200">
@@ -42,11 +56,18 @@ export default function FileCard({ file }: Props) {
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-4 gap-3">
-        <span
-          className={`inline-flex self-start items-center rounded-full px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${badgeClass}`}
-        >
-          {file.product}
-        </span>
+        <div className="flex items-center justify-between gap-2">
+          <span
+            className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${badgeClass}`}
+          >
+            {file.product}
+          </span>
+          {updatedAt && (
+            <span className="text-xs text-neutral-600 shrink-0">
+              {updatedAt}
+            </span>
+          )}
+        </div>
         <div className="flex-1">
           <h3 className="font-semibold text-neutral-100 leading-snug mb-1">{file.title}</h3>
           <p className="text-sm text-neutral-400 line-clamp-2 leading-relaxed">{file.description}</p>

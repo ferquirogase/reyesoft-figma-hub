@@ -1,8 +1,10 @@
-export async function fetchFileThumbnail(fileKey: string): Promise<string | null> {
+export async function fetchFileThumbnail(
+  fileKey: string
+): Promise<{ thumbnailUrl: string | null; lastModified: string | null }> {
   const token = process.env.FIGMA_TOKEN
   if (!token) {
     console.warn(`[figma] FIGMA_TOKEN not set — thumbnail for "${fileKey}" will be null`)
-    return null
+    return { thumbnailUrl: null, lastModified: null }
   }
 
   const controller = new AbortController()
@@ -16,14 +18,16 @@ export async function fetchFileThumbnail(fileKey: string): Promise<string | null
     })
     if (!res.ok) {
       console.warn(`[figma] API error ${res.status} for fileKey "${fileKey}"`)
-      return null
+      return { thumbnailUrl: null, lastModified: null }
     }
     const data = await res.json()
-    const url = (data.thumbnailUrl as string) ?? (data.thumbnail_url as string) ?? null
-    return url && url.trim() ? url : null
+    const rawUrl = (data.thumbnailUrl as string) ?? (data.thumbnail_url as string) ?? null
+    const thumbnailUrl = rawUrl && rawUrl.trim() ? rawUrl : null
+    const lastModified = (data.lastModified as string) ?? null
+    return { thumbnailUrl, lastModified }
   } catch (err) {
     console.warn(`[figma] fetch failed for "${fileKey}":`, err instanceof Error ? err.message : err)
-    return null
+    return { thumbnailUrl: null, lastModified: null }
   } finally {
     clearTimeout(timeoutId)
   }
